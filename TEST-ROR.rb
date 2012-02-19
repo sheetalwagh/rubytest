@@ -53,7 +53,7 @@ end
 # spent in a view which is a large file.(1000 lines). How will you go about
 # debugging the speed issue?
 #
-#
+# solution  debugging in views we can use rackbug & newrelic or any other gems can use which shows statiscs of like Oink 
 
 
 # Problem 5
@@ -80,7 +80,18 @@ class ArticleController < ApplicationController
   end
 end
 
+class Articles < ActiveRecord::Base
+  has_many :related_articles, :class_name => "Article"
+  belongs_to :main_article, :class_name => "Article",
+    :foreign_key => "article_id"
+end
 
+class Comments < ActiveRecord::Base
+  
+end
+
+class Info < ActiveRecord::Base
+end
 # Problem 6:
 # What are the two gems/plugins that you have found extremely useful?
 # Why did you choose them?
