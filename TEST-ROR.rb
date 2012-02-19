@@ -98,6 +98,12 @@ end
 # Did they have any alternatives? If yes, what factors made you choose these gems
 # and not the alternatives ?
 #
+# devise can use for authountication & will_paginate for pagination 
 
 # Problem 7
 # What's the deployment stack you use? Why?
+
+# web server- nginx  can use apache also
+# application server- phusion passenger, thin, mongrel 
+# multiple ruby  by using rvm
+# capistrano can use as deployment stack.
